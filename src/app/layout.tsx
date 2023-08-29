@@ -6,5 +6,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return <BaseLayout>{children}</BaseLayout>
+  return (
+    <html>
+      <BaseLayout>{children}</BaseLayout>
+    </html>
+  )
 }

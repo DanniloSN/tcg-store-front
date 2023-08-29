@@ -9,10 +9,10 @@ export default function BaseLayout({
   children: React.ReactNode
 }) {
   return (
-    <>
+    <body>
       <Header />
       <Delimiter padding>{children}</Delimiter>
       <Footer />
-    </>
+    </body>
   )
 }
