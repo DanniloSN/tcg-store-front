@@ -7,7 +7,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html>
+    <html lang='en'>
+      <head>
+        <title>TCG Store</title>
+      </head>
       <BaseLayout>{children}</BaseLayout>
     </html>
   )
