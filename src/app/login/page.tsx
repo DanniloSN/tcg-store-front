@@ -1,3 +1,3 @@
-export default function LoginPage() {
-  return <span>Login Page</span>
+export default function Login() {
+  return <h1>Login</h1>
 }

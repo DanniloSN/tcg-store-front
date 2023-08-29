@@ -1,5 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #4c1d95;
+  --white: #f8fafc;
+  --black: #0a0a0a;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+.delimiter {
+  margin: auto;
+  max-width: auto;
+}
+@media (min-width: 576px) {
+  .delimiter {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .delimiter {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .delimiter {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .delimiter {
+    max-width: 1140px;
+  }
 }
