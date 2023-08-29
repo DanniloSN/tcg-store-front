@@ -9,7 +9,7 @@ export default function BaseLayout({
   children: React.ReactNode
 }) {
   return (
-    <body>
+    <body className='bg-[--background-color]'>
       <Header />
       <Delimiter padding>{children}</Delimiter>
       <Footer />

@@ -1,19 +1,17 @@
+import Img from '@/components/atoms/img'
 import Delimiter from '@/components/molecules/delimiter'
 import Link from 'next/link'
 import { BiUserCircle } from 'react-icons/bi'
 
 export default function Header() {
   return (
-    <header className='py-6 bg-[--primary-color] shadow-md'>
+    <header className='py-3 bg-[--primary-color] shadow-md'>
       <Delimiter>
-        <div className='grid grid-cols-3'>
+        <div className='flex justify-between items-center px-2 text-[--white]'>
           <Link href='/'>
-            <span className='pl-2'>#</span>
+            <Img width={100} height={20} src='/next.svg' alt="Site's logo" />
           </Link>
-          <Link href='/'>
-            <h1 className='text-center text-[--white]'>TCG STORE</h1>
-          </Link>
-          <Link href='/login' className='text-2xl ml-auto pr-2'>
+          <Link href='/login' className='text-4xl'>
             <BiUserCircle />
           </Link>
         </div>
