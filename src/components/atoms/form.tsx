@@ -2,7 +2,7 @@ import React, { FormEvent } from 'react'
 
 interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
   children: React.ReactNode
-  onSubmit: <T>(values: T) => void
+  onSubmit: (values: any, event?: FormEvent<HTMLFormElement>) => void
 }
 
 export default function Form(props: FormProps) {
@@ -18,7 +18,7 @@ export default function Form(props: FormProps) {
       if (!name && !value) return previous
       return { ...previous, [name]: value }
     }, {})
-    props.onSubmit(formValues)
+    props.onSubmit(formValues, event)
   }
   return <form {...props} onSubmit={onSubmit}>{props.children}</form>
 }
