@@ -25,14 +25,15 @@ export default function Register() {
         <BsPersonFillAdd />
       </div>
       <Form className='mt-8' onSubmit={onSubmit}>
-        <Input name='name' placeholder='Name' />
-        <Input className='mt-4' name='phone' placeholder='Phone' type='tel' />
-        <Input className='mt-4' name='email' placeholder='Email' type='email' />
+        <Input name='name' placeholder='Name' required />
+        <Input className='mt-4' name='phone' placeholder='Phone' type='tel' required />
+        <Input className='mt-4' name='email' placeholder='Email' type='email' required />
         <Input
           className='mt-4'
           name='password'
           placeholder='Password'
           type='password'
+          required
         />
         <Button className='mt-6'>Register</Button>
       </Form>
