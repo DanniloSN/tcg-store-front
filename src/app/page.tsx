@@ -6,7 +6,7 @@ import useSWRInfinite from 'swr/infinite'
 export default function Home() {
   const getKey = (pageIndex: any, previousPageData: string | any[]) => {
     if (previousPageData && !previousPageData.length) return null
-    return `cards/catalog?page=${pageIndex}`
+    return `cards/catalog?page=${pageIndex + 1}`
   }
 
   const fetcher = async (url: string) => {
@@ -30,9 +30,13 @@ export default function Home() {
         )}
       </div>
       <br />
-      <Button onClick={() => setSize((old) => old + 1)} disabled={isLoading}>
-        {isLoading ? 'Loading...' : 'Load More'}
-      </Button>
+      {data?.length ? (
+        <Button onClick={() => setSize((old) => old + 1)} disabled={isLoading}>
+          {isLoading ? 'Loading...' : 'Load More'}
+        </Button>
+      ) : (
+        <h1>Loading cards</h1>
+      )}
     </>
   )
 }
