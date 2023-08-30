@@ -2,7 +2,7 @@
 import Button from '@/components/atoms/button'
 import { useRouter } from 'next/navigation'
 
-export default function Store() {
+export default function StorePage() {
   const router = useRouter()
   return (
     <>

@@ -5,15 +5,15 @@ import Input from '@/components/atoms/input'
 import { useRouter } from 'next/navigation'
 import { BsPersonFill } from 'react-icons/bs'
 
-interface LoginProps {
+interface LoginSubmitProps {
   email: string
   password: string
 }
 
-export default function Login() {
+export default function LoginPage() {
   const router = useRouter()
 
-  const onSubmit = (data: LoginProps) => {
+  const onSubmit = (data: LoginSubmitProps) => {
     console.log(data)
   }
 

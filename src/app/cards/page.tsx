@@ -4,7 +4,7 @@ import Img from '@/components/atoms/img'
 import { useRouter } from 'next/navigation'
 import useSWRInfinite from 'swr/infinite'
 
-export default function Cards() {
+export default function CardsPage() {
   const router = useRouter()
 
   const getKey = (pageIndex: any, previousPageData: string | any[]) => {

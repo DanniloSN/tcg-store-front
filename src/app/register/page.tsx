@@ -5,17 +5,17 @@ import Input from '@/components/atoms/input'
 import { useRouter } from 'next/navigation'
 import { BsPersonFillAdd } from 'react-icons/bs'
 
-interface RegisterProps {
+interface RegisterSubmitProps {
   name: string
   phone: string
   email: string
   password: string
 }
 
-export default function Register() {
+export default function RegisterPage() {
   const router = useRouter()
 
-  const onSubmit = (data: RegisterProps) => {
+  const onSubmit = (data: RegisterSubmitProps) => {
     console.log(data)
   }
 
