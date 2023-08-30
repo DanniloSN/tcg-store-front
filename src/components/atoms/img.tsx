@@ -14,8 +14,8 @@ export default function Img(
     > & {
       src: string | StaticImport
       alt: string
-      width: number | `${number}` | undefined
-      height: number | `${number}` | undefined
+      width?: number | `${number}` | undefined
+      height?: number | `${number}` | undefined
       fill?: boolean | undefined
       loader?: ImageLoader | undefined
       quality?: number | `${number}` | undefined
@@ -32,5 +32,12 @@ export default function Img(
       lazyRoot?: string | undefined
     } & RefAttributes<HTMLImageElement | null>
 ) {
-  return <Image {...props} alt={props.alt ?? ''} />
+  return (
+    <Image
+      {...props}
+      width={props.width ?? 1000}
+      height={props.height ?? 1000}
+      alt={props.alt ?? ''}
+    />
+  )
 }

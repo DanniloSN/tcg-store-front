@@ -1,13 +1,13 @@
 import React from 'react'
 
-interface DelimiterProps {
-  children: React.ReactNode
-  padding?: boolean
-}
-
-export default function Delimiter(props: DelimiterProps) {
+export default function Delimiter(
+  props: React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  >
+) {
   return (
-    <div className={`delimiter ${props.padding && 'p-2'}`}>
+    <div {...props} className={`delimiter ${props.className ?? ''}`}>
       {props.children}
     </div>
   )

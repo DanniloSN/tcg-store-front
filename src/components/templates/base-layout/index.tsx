@@ -11,7 +11,7 @@ export default function BaseLayout({
   return (
     <body className='bg-[--background-color]'>
       <Header />
-      <Delimiter padding>{children}</Delimiter>
+      <Delimiter className='p-2 pb-16'>{children}</Delimiter>
       <Footer />
     </body>
   )

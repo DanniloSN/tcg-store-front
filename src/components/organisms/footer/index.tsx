@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className='fixed bottom-0 p-4 w-screen bg-[--black]'>
       <Delimiter>
-        <span className='text-[--white]'>Project by DanniloSN</span>
+        <span className='text-[--white]'>Created by DanniloSN</span>
       </Delimiter>
     </footer>
   )
